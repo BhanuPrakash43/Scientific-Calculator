@@ -1,0 +1,200 @@
+/* Container styles */
+
+.container {
+  font-family: "Roboto", sans-serif;
+  width: 120vh;
+  margin: 100px auto 0;
+  border: 2px solid #7b7b7b;
+  border-radius: 15px;
+  background-color: #2e2e2e;
+  color: white;
+  margin-top: 50px;
+}
+
+.container.dark {
+  background-color: #222;
+  color: #fff;
+}
+
+.container.light {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Display styles */
+
+.display {
+  background-color: #515151;
+  color: white;
+  font-size: 3rem;
+  width: 99%;
+  height: 100px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 2px;
+  margin-bottom: 2px;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.display.dark {
+  background-color: #333;
+  color: #fff;
+}
+
+.display.light {
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+.buttonGrid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 2px;
+}
+
+.button {
+  background-color: #555;
+  border: none;
+  padding: 20px;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Theme toggle button */
+.themeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Dark theme styles */
+.button.dark {
+  background-color: #444;
+  color: #fff;
+}
+
+/* Light theme styles */
+.button.light {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+/* Orange operator button styles */
+
+.button.dark.orangeOperator {
+  background-color: darkorange;
+}
+
+.button.dark.orangeOperator:hover {
+  background-color: rgb(222, 129, 15);
+}
+
+.button.light.orangeOperator {
+  background-color: orange;
+  color: white;
+}
+
+.button.light.orangeOperator:hover {
+  background-color: rgb(222, 129, 15);
+}
+
+/* rad button styles */
+
+.button.radButton {
+  border-radius: 0px 0px 0px 15px;
+}
+
+.button.dark.number {
+  background-color: #5a5a5a;
+}
+
+.button.dark.number:hover {
+  background-color: #777;
+}
+
+.button.light.number {
+  background-color: #f0f0f0;
+}
+
+.button.light.number:hover {
+  background-color: #777;
+}
+
+.button:hover {
+  background-color: #777;
+}
+
+.equals {
+  border-radius: 0px 0px 15px 0px;
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+@media (max-width: 1300px) {
+  .container {
+    width: 70%;
+    height: 90%;
+  }
+
+  .display {
+    font-size: 1.8rem;
+  }
+
+  .button {
+    font-size: 1rem;
+    padding: 20px 10px;
+  }
+}
+
+@media (max-width: 850px) {
+  .container {
+    width: 95vw;
+    margin-top: 80px;
+  }
+
+  .display {
+    height: 85px;
+    font-size: 2rem;
+  }
+
+  .button {
+    font-size: 1rem;
+    padding: 20px 15px;
+  }
+}
+
+@media (max-width: 615px) {
+  .container {
+    width: 90vw;
+    margin-top: 85px;
+  }
+
+  .display {
+    height: 65px;
+  }
+
+  .button {
+    font-size: 0.8rem;
+    padding: 15px 7px;
+  }
+
+  .operator,
+  .equals {
+    grid-column: span 1;
+  }
+
+  .zero {
+    grid-column: span 2;
+  }
+}
